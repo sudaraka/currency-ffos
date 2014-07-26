@@ -33,19 +33,43 @@
      */
     var fill_currency_select = function() {
         var currency_cache;
+        var in_api_call = false;
 
         // Closure for the currency_cache
         var _fill_currency_select = function(select_id) {
             if(!currency_cache) {
+                // Mitigate concurrent requests while loading data from API
+                if(in_api_call) {
+                    setTimeout(function() {
+                        _fill_currency_select(select_id);
+                    }, 1000);
+
+                    return false;
+                }
+
+                in_api_call = true;
+
                 // When the cache empty, initialize cache instead of filling the
                 // select element.
-                currency_cache = [
-                    {code: 'UDS', name: 'US Dollar'},
-                    {code: 'EUR', name: 'Euro'},
-                    {code: 'LKR', name: 'Sri Lankan Rupee'},
-                ];
+                Ajax.get(
+                    'http://www.freecurrencyconverterapi.com/api/currencies',
+                    function(result) {
+                        var currency_list = JSON.parse(result.data).results;
 
-                _fill_currency_select(select_id);
+                        currency_cache = [];
+
+                        for(var code in currency_list) {
+                            currency_cache.push({
+                                code: code,
+                                name: currency_list[code].currencyName
+                            });
+                        }
+
+                        in_api_call = false;
+
+                        _fill_currency_select(select_id);
+                    }
+                );
 
                 return false;
             }

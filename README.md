@@ -24,6 +24,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ### Dependencies and Resources
 
+- **The Free Currency Converter API**
+
+    By [Manny Vergel] [http://www.freecurrencyconverterapi.com/contact]
+    Under MIT License
+
 - **App Icon**
 
     By [Vezok] [http://vezok.deviantart.com/]

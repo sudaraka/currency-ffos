@@ -7,6 +7,12 @@
     },
 
     "launch_path": "/index.html",
+    "type": "privileged",
+    "permissions": {
+        "systemXHR": {
+            "description": "Make API request to freecurrencyconverterapi.com"
+        }
+    },
 
     "developer": {
         "name": "Sudaraka Wijesinghe",
