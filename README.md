@@ -5,7 +5,7 @@ Currency converter using web API from freecurrencyconverterapi.com
 Note: This application was created to demonstrate the Firefox OS application
 development.
 
-Copyright 2014 [Sudaraka Wijesinghe] [http://sudaraka.org/].
+Copyright 2014 [Sudaraka Wijesinghe] [url_sudaraka_org].
 
 ## License
 
@@ -26,15 +26,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 - **The Free Currency Converter API**
 
-    By [Manny Vergel] [http://www.freecurrencyconverterapi.com/contact]
+    By [Manny Vergel] [url_manny]
     Under MIT License
 
 - **App Icon**
 
-    By [Vezok] [http://vezok.deviantart.com/]
+    By [Vezok] [url_vezok]
     Under Freeware Non-commercial License
 
 - **Bootstrap**
 
-    By [Twitter, Inc] [https://twitter.com/]
+    By [Twitter, Inc] [url_twitter]
     Under MIT License
+
+    [url_sudaraka_org]: http://sudaraka.org/
+    [url_manny]: http://www.freecurrencyconverterapi.com/contact
+    [url_vezok]: http://vezok.deviantart.com/
+    [url_twitter]: https://twitter.com/
