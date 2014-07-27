@@ -39,7 +39,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     By [Twitter, Inc] [url_twitter]
     Under MIT License
 
-    [url_sudaraka_org]: http://sudaraka.org/
-    [url_manny]: http://www.freecurrencyconverterapi.com/contact
-    [url_vezok]: http://vezok.deviantart.com/
-    [url_twitter]: https://twitter.com/
+
+[url_sudaraka_org]: http://sudaraka.org/
+[url_manny]: http://www.freecurrencyconverterapi.com/contact
+[url_vezok]: http://vezok.deviantart.com/
+[url_twitter]: https://twitter.com/
