@@ -33,3 +33,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     By [Vezok] [http://vezok.deviantart.com/]
     Under Freeware Non-commercial License
+
+- **Bootstrap**
+
+    By [Twitter, Inc] [https://twitter.com/]
+    Under MIT License
