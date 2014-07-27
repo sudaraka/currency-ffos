@@ -98,4 +98,39 @@
     fill_currency_select('cur_from');
     fill_currency_select('cur_to');
 
+    // Button click event
+    var btn_convert = document.getElementById('btn_convert');
+
+    // btn_convert.onclick {{{
+    btn_convert.addEventListener('click', function(e) {
+        var cur_from = document.getElementById('cur_from');
+        var cur_to = document.getElementById('cur_to');
+        var pair = cur_from.value + '-' + cur_to.value;
+
+        var _show_result = function(rate) {
+            var result = document.getElementById('result');
+
+            result.innerHTML = '1 ' + cur_from.value +
+                ' = ' + rate + ' ' + cur_to.value;
+        };
+
+        if(cur_from.value == cur_to.value) {
+            // Same currency
+            _show_result(1);
+
+            return;
+        }
+
+        Ajax.get(
+            'http://www.freecurrencyconverterapi.com/api/convert?compact=y&q=' +
+                escape(pair),
+            function(result) {
+                var rate = JSON.parse(result.data)[pair];
+
+                _show_result(rate.val);
+            }
+        );
+    });
+    // }}}
+
 }());
