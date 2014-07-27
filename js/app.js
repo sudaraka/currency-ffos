@@ -108,10 +108,25 @@
         var pair = cur_from.value + '-' + cur_to.value;
 
         var _show_result = function(rate) {
+            var amount = document.getElementById('amount');
             var result = document.getElementById('result');
+            var convert_value = parseFloat(amount.value);
 
-            result.innerHTML = '1 ' + cur_from.value +
-                ' = ' + rate + ' ' + cur_to.value;
+            result.innerHTML = '';
+
+            rate = parseFloat(rate);
+
+            if(isNaN(rate)) {
+                result.innerHTML = 'Exchange rate not found';
+
+                return;
+            }
+
+            if(isNaN(convert_value))
+                convert_value = amount.value = 1;
+
+            result.innerHTML = (convert_value * rate).toFixed(2) + ' ' +
+                cur_to.value;
         };
 
         if(cur_from.value == cur_to.value) {
